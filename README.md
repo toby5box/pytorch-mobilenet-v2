@@ -20,10 +20,11 @@ Here is a comparison of statistics against the official TensorFlow [implementati
 To use the pretrained model, run
 
 ```python
+import torch
 from MobileNetV2 import MobileNetV2
 
 net = MobileNetV2(n_class=1000)
-state_dict = torch.load('mobilenetv2.pth.tar') # add map_location='cpu' if no gpu
+state_dict = torch.load('mobilenet_v2.pth.tar') # add map_location='cpu' if no gpu
 net.load_state_dict(state_dict)
 ```
 
